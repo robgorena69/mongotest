@@ -1,0 +1,9 @@
+use("platzi_store")
+
+db.products.updateMany({
+    region:"JAPON"
+},{
+    $unset:{
+        voltaje:""
+    }
+})

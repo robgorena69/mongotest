@@ -1,0 +1,12 @@
+use("platzi_store")
+
+db.products.insertOne({
+    _id:2,
+    name:"XBOX",
+    price:6000
+})
+db.products.insertOne({
+    _id:3,
+    name:"PS5",
+    price:5000
+})

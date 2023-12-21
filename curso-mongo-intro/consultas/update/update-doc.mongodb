@@ -1,0 +1,14 @@
+use("platzi_store")
+
+db.products.updateOne(
+    {
+        _id:31,
+    },
+    {
+        $set:{
+            name: 'Switch One',
+            price: 750,
+            tags: ['A','B']
+        }
+    }
+)

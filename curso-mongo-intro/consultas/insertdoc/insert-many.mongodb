@@ -1,0 +1,47 @@
+use("platzi_store")
+
+db.products.drop()
+
+db.products.insertMany([{
+    _id:11,
+    name:"Switch",
+    price:600,
+    region:"USA"
+},
+{   
+    _id:21,
+    name:"PS5",
+    price:3500,
+    region:"USA"
+},
+{
+    name:"X360",
+    price:5000,
+    region:"JAPON"
+},
+{
+     _id:31,
+    name:"xboxone",
+    price:5000,
+    region:"USA"
+},
+{
+   name:"GAMEBOY",
+   price:5000,
+   region:"JAPON"
+},
+{
+   name:"SNES",
+   price:5000,
+   region:"JAPON"
+},
+{
+   name:"SEGA",
+   price:5000,
+   region:"JAPON"
+}
+],{
+    ordered:false
+})
+
+db.products.find()
