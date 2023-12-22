@@ -1,0 +1,7 @@
+use("platzi_store")
+
+//db.inventory.find({ "item.description":{ $regex:/LINE$/i}}) //BUSCA AL FINAL CON EL CARACTER $
+//db.inventory.find({ "item.description":{ $regex:/^MANY/i}}) // BUSCA AL PRINCIPIO CON EL CARACTER ^
+//db.inventory.find({ "item.description":{ $regex:/^S/i}}) // BUSCA AL PRINCIPIO TODOS LOS DOCUEMNTOS QUE EMPIECEN CON S
+db.inventory.find({ "item.description":{ $regex:/^S/im}}) // BUSCA AL PRINCIPIO TODOS LOS DOCUEMNTOS QUE EMPIECEN CON S y respeta el salto de linea
+

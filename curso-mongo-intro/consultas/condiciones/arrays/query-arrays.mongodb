@@ -1,0 +1,8 @@
+use("platzi_store")
+
+//$in, valor especifico y array
+//db.inventory.find({ qty: { $in: [20,25]}})
+//db.inventory.find({ tags: { $in:["school","electronics"]}}) //tambien trae elementos de un array
+//db.inventory.find({ tags: { $in:["school","electronics"]}}) //tambien trae elementos de un array
+//db.inventory.find({ qty: { $nin: [20,25]}})
+db.inventory.find({ tags: { $nin:["book","electronics"]}}) //tambien trae elementos de un array

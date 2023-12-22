@@ -1,0 +1,19 @@
+use("platzi_store")
+
+// operadores arrays y numeros
+//db.inventory.find({ qty: { $in:[20,25,50]}}) //valores numericos
+//db.inventory.find({ tags: { $in:["appliance"]}}) //busca elementos en un array
+//db.inventory.find({ tags: { $nin:["appliance"]}}) //busca lo que no esta con appliance nin
+
+//operadores solo arrays
+
+//db.inventory.find({ tags: "book"}) //solo si se desea buscar en un array si existe un elemento
+//db.inventory.find({ tags: ["appliance","school","book"]}) //solo si se desea buscar en un array la coincidencia exacta
+
+//arrays $all
+//db.inventory.find({ tags:{$all: ["book","school"]}}) //buscar en un array si estan los dos objetos, sin importar el orden, pero deben estar los dos
+
+//db.inventory.find({ tags: {$size:3}}) // busca arrays que solo tengan dos elementos
+
+// $elemMatch
+db.survey.find({ results: { $elemMatch : { product: "xyz", score: {$gte:6}}}})  //busca elementos dentro del array product, que tengan la coincidenia

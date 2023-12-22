@@ -1,0 +1,34 @@
+use("platzi_store")
+
+//db.monthlyBudget.find({ spent: {$gte:100}}) una forma
+
+
+//db.monthlyBudget.find({
+//    $expr:{
+//        $gte: ["$spent",100]
+//    }
+//})
+
+
+//db.monthlyBudget.find({ 
+//    $expr:{
+//        $gte: ["$spent","$budget"] //se puede pasar directamente los atributos de la tabla
+//    }
+//})
+
+
+db.monthlyBudget.find({ 
+    $and:[{
+        $expr:{
+            $and:[{$gte: ["$spent","$budget"]},
+                  {$gte: ["$_id",6]}
+                ]} 
+    },{
+        category:"travel"
+    }]
+    
+         //se puede pasr directamente los atributos de la tabla
+    
+})
+
+

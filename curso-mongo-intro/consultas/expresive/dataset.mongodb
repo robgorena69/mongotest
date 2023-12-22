@@ -1,0 +1,17 @@
+use("platzi_store")
+
+db.monthlyBudget.drop()
+
+db.monthlyBudget.insertMany([
+  { "_id" : 1, "category" : "food",    "budget": 400, "spent": 450 },
+  { "_id" : 2, "category" : "drinks",  "budget": 100, "spent": 150 },
+  { "_id" : 3, "category" : "clothes", "budget": 100, "spent": 50  },
+  { "_id" : 4, "category" : "misc",    "budget": 500, "spent": 300 },
+  { "_id" : 5, "category" : "travel",  "budget": 500, "spent": 650 },
+  { "_id" : 6, "category" : "travel",  "budget": 600, "spent": 700 },
+  { "_id" : 7, "category" : "travel",  "budget": 700, "spent": 650 },
+  { "_id" : 8, "category" : "drinks",  "budget": 800, "spent": 650 },
+  { "_id" : 9, "category" : "drinks",  "budget": 900, "spent": 650 }
+])
+
+db.monthlyBudget.find()

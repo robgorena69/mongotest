@@ -1,0 +1,21 @@
+use("platzi_store")
+
+db.monthlyBudget.aggregate(
+    [{
+        $match: {budget:100}
+    },
+    {
+        $project: {
+          category:1,
+          _id:0
+        }
+    },
+    {
+        $group: {
+          _id: "$category",
+          count: {$sum:1 }
+        }
+    }
+
+    ]
+)

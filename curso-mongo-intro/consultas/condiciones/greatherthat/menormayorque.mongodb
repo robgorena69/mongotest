@@ -1,0 +1,10 @@
+use("platzi_store")
+
+/*db.inventory.find({
+    qty: { $gt:20}
+})
+*/
+db.inventory.find({
+    "item.name":"abc",
+    qty: { $gt:12, $lte:25}
+})

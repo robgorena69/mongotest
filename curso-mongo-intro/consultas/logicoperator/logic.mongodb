@@ -1,0 +1,16 @@
+use("platzi_store")
+
+//db.inventory.find({qty:{$gte:15},tags:{ $in:["electronics"]}}) //and implicito
+//db.inventory.find({
+//    $and:[{qty:{$gte:5}},{tags:{ $in:["book"]}}]}) //and explicto con $and y entre [{},{}]
+//or
+//db.inventory.find({
+//        $or:[{qty:{$gte:15}},{tags:{ $in:["bag"]}}]}) //or explicto con $and y entre [{},{}]
+// nor    
+//b.inventory.find({
+//        $nor:[{qty:{$gte:28}},{tags:{ $in:["bag"]}}]}) //nor lo que no incluye
+        
+
+db.inventory.find({
+    "item.description" : { $not: {$regex:"/description/$"}}
+})
